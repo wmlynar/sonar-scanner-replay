@@ -8,4 +8,4 @@ usage:
 
 your sonar repository will be populated with historical data
 
-please notice that sonar will not accept results dated earlier than already existing in its database. in sauch a case - delete the whole project in sonar and execute the script
+please notice that sonar will not accept results dated earlier than already existing in its database. in such case - delete the whole project in sonar and execute the script
