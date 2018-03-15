@@ -9,6 +9,7 @@ BUILD_COMMAND='mvn clean install'
 BRANCH=master
 
 rm -rf $TMP_FOLDER
+mkdir -p $TMP_FOLDER
 git clone $PROJECT_REPO $TMP_FOLDER
 cd $TMP_FOLDER
 
