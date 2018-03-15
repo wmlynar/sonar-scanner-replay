@@ -17,7 +17,7 @@ cd $TMP_FOLDER
 git checkout ${BRANCH}
 git pull
 
-commit_log=( $(git log --date=short | grep -e "Date:" | sed -E 's/commit //' | sed -E 's/Date:[ ]+//' | uniq | tac | head -n ${NUM_DAYS} ) )
+commit_log=( $(git log --date=short | grep -e "Date:" | sed -E 's/Date:[ ]+//' | uniq | tac | head -n ${NUM_DAYS} ) )
 
 for ((i=0; i<${#commit_log[*]}; i++)); do
 
