@@ -7,6 +7,7 @@ PROJECT_REPO=https://github.com/wmlynar/extended-kalman-filter.git
 TMP_FOLDER=~/tmp/sonar-replay-tmp
 BUILD_COMMAND='mvn clean install'
 BRANCH=master
+NUM_DAYS=100
 
 rm -rf $TMP_FOLDER
 mkdir -p $TMP_FOLDER
@@ -16,7 +17,7 @@ cd $TMP_FOLDER
 git checkout ${BRANCH}
 git pull
 
-commit_log=( $(git log --date=short | grep -e "Date:" | sed -E 's/commit //' | sed -E 's/Date:[ ]+//' | uniq | tac) )
+commit_log=( $(git log --date=short | grep -e "Date:" | sed -E 's/commit //' | sed -E 's/Date:[ ]+//' | uniq | tac | head -n ${NUM_DAYS} ) )
 
 for ((i=0; i<${#commit_log[*]}; i++)); do
 
