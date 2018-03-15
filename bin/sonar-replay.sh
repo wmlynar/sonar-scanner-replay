@@ -5,7 +5,7 @@ SONAR_SCANNER=/opt/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner
 CONFIGURATION_FILE=/home/woj/tmp/sonar-project.properties
 PROJECT_REPO=https://repo.inovatica.com/automatyczne-wozki-widlowe/canboxros.git
 TMP_FOLDER=~/tmp/sonar-replay-tmp
-BUILD_COMMAND='mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install'
+BUILD_COMMAND='mvn clean install'
 BRANCH=master
 NUM_DAYS=100
 
